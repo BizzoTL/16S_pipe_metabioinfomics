@@ -6,13 +6,12 @@ The aim of this pipeline is to generate 16S rRNA data from next generation of Il
 
 ## Installation and usage
 Clone the following repository in your environment. 
-Install the following R packages: 
-''' Rcpp, dada2, fastqcr, ShortRead, Biostrings, phyloseq, MicrobiotaProcess, ggplot2, ranacapa, string, devtools '''
-Install the following Python packages: ''' pandas, numpy, matplotlib.pyplot, openpyxl, os '''
+Install the following R packages: Rcpp, dada2, fastqcr, ShortRead, Biostrings, phyloseq, MicrobiotaProcess, ggplot2, ranacapa, string, devtools 
+Install the following Python packages: pandas, numpy, matplotlib.pyplot, openpyxl, os
 Install cutadapt.
-Follow the R script by specifying the working folder(where the data will be saved), the number of threads to be used by certain functions, the path to your reads(in .fastq.gz format) and the database to use(SILVA or UNITE).
-Create an excel file titled "Campioni.xlsx" where you have three columns: "Nome", "Replica"	"Nome file fastq (forward reads)". In the first columns you will specify the condition of interest for each sample taken in exam. In the second you have an unique numerical ID of the sample and finally in the last column the name of the fastq file assosiacet with that sample.
-Open the "main.py" file and modify the input and output folder accordigly. Run the script.
+Follow the R script by specifying the working folder(where the data will be saved), the number of threads to be used by certain functions, the path to your reads(in .fastq.gz format), and the database to use(SILVA or UNITE).
+Create an excel file titled "Campioni.xlsx" where you have three columns: "Nome", "Replica"	"Nome file fastq (forward reads)". In the first columns, you will specify the condition of interest for each sample taken in  exam. In the second, you have a unique numerical ID of the sample, and  in the last column, the name of the fastq file associated with that sample.
+Open the "main.py" file and modify the input and output folder accordingly. Run the script.
 
 ## Output
 The R part of the script returns a series of folders:
