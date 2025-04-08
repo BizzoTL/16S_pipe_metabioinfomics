@@ -1,19 +1,20 @@
 # 16S_pipe_metabioinfomics
-##Pipeline for the analysis of 16S rRNA data 
+## Pipeline for the analysis of 16S rRNA data 
 
 
 The aim of this pipeline is to generate 16S rRNA data from next generation of Illumina sequences. The first part of the pipeline is in the R language, a modified version of the DADA2 tutorial pipeline (https://benjjneb.github.io/dada2/tutorial.html). The second part takes the results of the R pipeline and, through custom Python scripts, generates a table with the differentially expressed species in different conditions, including graphs and supporting elements for the analysis.
 
-##Installation and usage
+## Installation and usage
 Clone the following repository in your environment. 
-Install the following R packages: Rcpp, dada2, fastqcr, ShortRead, Biostrings, phyloseq, MicrobiotaProcess, ggplot2, ranacapa, string, devtools
-Install the following Python packages: pandas, numpy, matplotlib.pyplot, openpyxl, os
+Install the following R packages: 
+''' Rcpp, dada2, fastqcr, ShortRead, Biostrings, phyloseq, MicrobiotaProcess, ggplot2, ranacapa, string, devtools '''
+Install the following Python packages: ''' pandas, numpy, matplotlib.pyplot, openpyxl, os '''
 Install cutadapt.
 Follow the R script by specifying the working folder(where the data will be saved), the number of threads to be used by certain functions, the path to your reads(in .fastq.gz format) and the database to use(SILVA or UNITE).
 Create an excel file titled "Campioni.xlsx" where you have three columns: "Nome", "Replica"	"Nome file fastq (forward reads)". In the first columns you will specify the condition of interest for each sample taken in exam. In the second you have an unique numerical ID of the sample and finally in the last column the name of the fastq file assosiacet with that sample.
 Open the "main.py" file and modify the input and output folder accordigly. Run the script.
 
-##Output
+## Output
 The R part of the script returns a series of folders:
 -fastqc: contains the results of fastqc before and after trimming the reads (to control if the trimming was successful and the reads are of sufficient quality)
 -cutadapt: contains the reads filtered by cutadapt (so you can resume the pipeline there in order to modify the script down the line to avoid refiltering and retrimming)
